@@ -1,12 +1,7 @@
 
-# User-specific files
 *.suo
 *.user
-*.sln.docstates
-
-# Build results
-[Dd]ebug/
-[Rr]elease/
-x64/
-[Bb]in/
-[Oo]bj/
+_ReSharper.*
+bin
+obj
+packages
