@@ -1,9 +1,8 @@
 ﻿using PriceScreen.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using PriceScreen.Models;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Threading.Tasks;
 using PriceScreen.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +19,7 @@ namespace PriceScreen
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddRazorPages();
+            services.AddRazorPages();
             services.AddDbContext<DatabaseContext>(conn => conn.UseSqlServer
             (Configuration.GetConnectionString("connectionstr")));
             services.AddScoped<ILogin, AuthenticateLogin>();

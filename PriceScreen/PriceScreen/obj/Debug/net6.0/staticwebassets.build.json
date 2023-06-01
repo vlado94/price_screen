@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "txdhRAM28PhqQFQmTIb6t1IfUVZ5iuwOG4DyAe0tOmQ=",
+  "Hash": "nodW50GbrHBQAsvQ8NUNzm35DXu/1WVvtJ3SSLVZItw=",
   "Source": "PriceScreen",
   "BasePath": "_content/PriceScreen",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\css\\Style.css",
+      "SourceId": "PriceScreen",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\",
+      "BasePath": "_content/PriceScreen",
+      "RelativePath": "css/Style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Style.css"
     },
     {
       "Identity": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\favicon.ico",
