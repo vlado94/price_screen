@@ -1,10 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.EntityFrameworkCore;
+using PriceScreen;
+using PriceScreen.Controllers;
+using PriceScreen.Models;
+using PriceScreen.Repository;
 
+
+
+var builder = WebApplication.CreateBuilder(args);
+var startup = new Startup(builder.Configuration);
+startup.ConfigureServices(builder.Services);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-
+startup.Configure(app, builder.Environment);
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -25,3 +34,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
