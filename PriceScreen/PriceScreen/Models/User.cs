@@ -13,5 +13,7 @@ namespace PriceScreen.Models
 
         [Column("Password", TypeName ="Varchar(200)")]
         public string Password { get; set; }
+
+       // public string Role { get; set; }
     }
 }

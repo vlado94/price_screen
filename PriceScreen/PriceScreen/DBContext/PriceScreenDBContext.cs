@@ -5,6 +5,10 @@ namespace PriceScreen.DBContext
 {
     public class PriceScreenDBContext : DbContext
     {
+        public PriceScreenDBContext()
+        {
+        }
+
         public PriceScreenDBContext(DbContextOptions options) : base(options)
         {
         }
