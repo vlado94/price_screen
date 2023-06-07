@@ -1,13 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PriceScreen.Models
 {
     public class User
     {
+        [Key]
         public int Id { get; set; }
+
+        [Column("Email", TypeName ="Varchar(200)")]
         public string Email { get; set; }
-        public string PassWord { get; set; }
-        public bool KeepLoggedIn { get; set; }
-        //public string Role { get; set; }    
+
+        [Column("Password", TypeName ="Varchar(200)")]
+        public string Password { get; set; }
     }
 }

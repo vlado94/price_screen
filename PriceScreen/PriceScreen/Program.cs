@@ -1,26 +1,16 @@
 using Microsoft.EntityFrameworkCore;
-using PriceScreen;
-using PriceScreen.Controllers;
+using PriceScreen.DBContext;
 using PriceScreen.Models;
-using Microsoft.AspNetCore.Authentication.Cookies;
-
 
 var builder = WebApplication.CreateBuilder(args);
-//PROBA var startup = new Startup(builder.Configuration);
-//PROBA startup.ConfigureServices(builder.Services);
-// Add services to the container.
-builder.Services.AddControllersWithViews();
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(option =>
-    {
-        option.LoginPath = "/Access/Login";
-        option.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-    });
+builder.Services.AddControllersWithViews();
+var provider = builder.Services.BuildServiceProvider();
+var configuration = provider.GetRequiredService<IConfiguration>();
+builder.Services.AddDbContext<PriceScreenDBContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
 
 var app = builder.Build();
-//PROBA startup.Configure(app, builder.Environment);
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
