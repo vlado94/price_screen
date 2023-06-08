@@ -1,13 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-//using PriceScreen.DBContext;
+using PriceScreen.Data;
 using PriceScreen.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddControllersWithViews();
-//var provider = builder.Services.BuildServiceProvider();
-//var configuration = provider.GetRequiredService<IConfiguration>();
-//builder.Services.AddDbContext<PriceScreenDBContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
+
+//builder.Services.AddDbContext<PriceScreenDbContext>(item => item.UseSqlServer(configuration.GetConnectionString("myconn")));
+
+builder.Services.AddDbContext<PriceScreenDbContext>
+    (options => options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionStrings")));
 
 var app = builder.Build();
 
@@ -33,3 +34,5 @@ app.MapControllerRoute(
 
 app.Run();
 
+//var provider = builder.Services.BuildServiceProvider();
+//var configuration = provider.GetRequiredService<IConfiguration>();
