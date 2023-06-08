@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PriceScreen.Models;
 using System.Diagnostics;
-using PriceScreen.DBContext;
+using PriceScreen.Data;
+
 
 namespace PriceScreen.Controllers
 {
@@ -26,15 +27,15 @@ namespace PriceScreen.Controllers
         public IActionResult Index(User _user)
         {
 
-            PriceScreenDBContext _UserContext = new PriceScreenDBContext();
-            var status = _UserContext.Users.Where(m=>m.Id == _user.Id && m.Password == _user.Password).FirstOrDefault();
-            if(status == null)
+            PriceScreenDbContext _UserContext = new PriceScreenDbContext();
+            var status = _UserContext.Users.Where(m => m.Email == _user.Email && m.Password == _user.Password).FirstOrDefault();
+            if (status == null)
             {
                 ViewBag.LoginStatus = 0;
             }
             else
             {
-                return RedirectToAction("SuccesPage","Home");
+                return RedirectToAction("SuccessPage", "Home");
             }
             return View(_user);
         }
@@ -43,6 +44,7 @@ namespace PriceScreen.Controllers
         {
             return View();
         }
+
 
         public IActionResult Privacy()
         {
@@ -56,3 +58,8 @@ namespace PriceScreen.Controllers
         }
     }
 }
+
+
+
+
+

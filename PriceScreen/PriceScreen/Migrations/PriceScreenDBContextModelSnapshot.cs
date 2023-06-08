@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PriceScreen.DBContext;
+using PriceScreen.Data;
 
 #nullable disable
 
 namespace PriceScreen.Migrations
 {
-    [DbContext(typeof(PriceScreenDBContext))]
-    partial class PriceScreenDBContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(PriceScreenDbContext))]
+    partial class PriceScreenDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -31,13 +31,11 @@ namespace PriceScreen.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("Varchar(200)")
-                        .HasColumnName("Email");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("Varchar(200)")
-                        .HasColumnName("Password");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
