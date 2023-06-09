@@ -41,7 +41,7 @@ namespace PriceScreen.Controllers
             var speakerViewModel = new StoreViewModel()
             {
                 Id = store.Id,
-                StoreName = store.StoreName,               
+                StoreName = store.StoreName,
                 Image = store.StoreLogo
             };
 
@@ -68,7 +68,7 @@ namespace PriceScreen.Controllers
                 Store store = new Store
                 {
                     StoreName = model.StoreName,
-                    StoreLocation = model.StoreLocation,                  
+                    StoreLocation = model.StoreLocation,
                     StoreLogo = uniqueFileName
                 };
 
@@ -90,7 +90,7 @@ namespace PriceScreen.Controllers
             var storeViewModel = new StoreViewModel()
             {
                 Id = store.Id,
-                StoreName = store.StoreName,        
+                StoreName = store.StoreName,
                 Image = store.StoreLogo
             };
 
@@ -142,7 +142,7 @@ namespace PriceScreen.Controllers
             {
                 Id = store.Id,
                 StoreName = store.StoreName,
-                StoreLocation = store.StoreLocation,            
+                StoreLocation = store.StoreLocation,
                 Image = store.StoreLogo
             };
             if (store == null)
@@ -192,6 +192,5 @@ namespace PriceScreen.Controllers
 
             return uniqueFileName;
         }
-
     }
 }
