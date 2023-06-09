@@ -7,9 +7,7 @@ namespace PriceScreen.Models
         public int Id { get; set; }
         public string StoreName { get; set; }
         public string StoreLocation { get; set; }
-
-        [Display(Name = "Image")]
-        public string ProfilePicture { get; set; }
+        public string StoreLogo { get; set; }
 
     }
 }
