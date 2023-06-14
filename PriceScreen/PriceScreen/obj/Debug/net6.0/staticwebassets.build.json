@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nodW50GbrHBQAsvQ8NUNzm35DXu/1WVvtJ3SSLVZItw=",
+  "Hash": "ybTNwDuajVBJHxG+CKOd16STCiFIaj3T3RtZqjVFZaw=",
   "Source": "PriceScreen",
   "BasePath": "_content/PriceScreen",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\image\\wp5052788",
+      "SourceId": "PriceScreen",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\",
+      "BasePath": "_content/PriceScreen",
+      "RelativePath": "image/wp5052788",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\wp5052788"
     },
     {
       "Identity": "D:\\PriceScreen\\price_screen\\PriceScreen\\PriceScreen\\wwwroot\\js\\site.js",

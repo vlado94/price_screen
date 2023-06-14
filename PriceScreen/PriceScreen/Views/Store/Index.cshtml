@@ -19,7 +19,7 @@
                 @Html.DisplayNameFor(model => model.StoreLocation)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StoreLogo)
+                @Html.DisplayNameFor(model => model.ImageName)
             </th>
             <th></th>
         </tr>
@@ -34,12 +34,12 @@
                 @Html.DisplayFor(modelItem => item.StoreLocation)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StoreLogo)
+                @Html.DisplayFor(modelItem => item.ImageName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.StoreId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StoreId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StoreId">Delete</a>
             </td>
         </tr>
 }

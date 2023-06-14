@@ -16,8 +16,9 @@ public partial class PriceScreenDbContext : DbContext
     {
     }
 
-    public virtual DbSet<User> Users { get; set; }
-    public virtual DbSet<Store> Stores { get; set; }
+    public DbSet<User> Users { get; set; }
+    public DbSet<Store> Stores { get; set; }
+    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
